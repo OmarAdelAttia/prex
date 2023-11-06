@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
+## Description
+
+In this project, I did not focus on the UI except on the final page. The card I used is from another repository I worked on previously. Most of my concentration was on using angular material since the project mentioned using it.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
