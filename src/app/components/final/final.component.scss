@@ -1,0 +1,120 @@
+fieldset {
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  div {
+    display: block;
+  }
+
+  img {
+    max-width: 30rem;
+    max-height: 30rem;
+    object-fit: cover;
+  }
+
+  hr {
+    margin: 1.25rem 0rem;
+    color: hsl(178, 100%, 50%);
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  .card {
+    width: 20rem;
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem 2rem;
+    background-color: hsl(216, 50%, 16%);
+  }
+  .card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    min-height: fit-content;
+  }
+  .card-img img {
+    width: 100%;
+  }
+  .card-title {
+    color: hsl(0, 0%, 100%);
+  }
+  .card-data {
+    color: hsl(0, 0%, 100%);
+  }
+  .card-cost-duration {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-cost {
+    display: flex;
+    align-items: center;
+    color: hsl(178, 100%, 50%);
+  }
+  .card-duration {
+    display: flex;
+    align-items: center;
+    color: hsl(215, 51%, 70%);
+  }
+  .icon {
+    margin-right: .3rem;
+  }
+  .creator-data {
+    display: flex;
+    align-items: center;
+    color: hsl(215, 51%, 70%);
+  }
+  .creator-data img {
+    width: 2rem;
+    border-radius: 50%;
+  }
+  .creator {
+    font-size: 1rem;
+    margin-left: .8rem;
+  }
+  .creator-name {
+    margin-left: .2rem;
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+  }
+  .card-img img:hover {
+    opacity: .5;
+  }
+  .card-img:hover {
+    cursor: pointer;
+    // background-image: url(../assets/icon-view.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 1rem;
+  }
+  .card-title:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+  }
+  .creator-name:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+  }
+
+  a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}

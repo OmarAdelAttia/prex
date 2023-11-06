@@ -1,0 +1,29 @@
+<fieldset>
+    <legend>Select your favorite season:</legend>
+
+    <div class="seasons" *ngFor="let season of seasons">
+        <input type="radio" [id]="season" [name]="seasons" [value]="season" (click)="showSeason(season)" />
+        <label [for]="season">{{season}}</label>
+    </div>
+
+    <main class="card" *ngIf="imgSeason">
+        <div class="card-img">
+            <img [src]="imgSeason" alt="equilibrium-pic" />
+        </div>
+        <div class="card-details">
+            <h2 class="card-title">
+                {{season}}
+            </h2>
+            <p class="card-data">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quod ducimus sint magni nulla
+                aspernatur. Sapiente alias suscipit omnis nobis.
+            </p>
+        </div>
+        <hr />
+        <div class="creator-data">
+            <span class="creator"> Creation of </span>
+            <span class="creator-name"> Omar Ibrahim </span>
+        </div>
+    </main>
+
+</fieldset>

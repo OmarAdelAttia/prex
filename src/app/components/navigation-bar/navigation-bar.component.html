@@ -1,0 +1,21 @@
+<mat-tab-group preserveContent>
+    <mat-tab routerLink="/dashboard" label="navigate to other pages">
+
+        <div class="">
+            <button mat-raised-button color="Basic" routerLink="">Back to home</button>
+
+            <button mat-raised-button color="accent" routerLink="/dashboard">Go to dashboard</button>
+
+            <button mat-raised-button color="warn" routerLink="/final">Go to final page</button>
+        </div>
+
+    </mat-tab>
+    <mat-tab label="Our market">
+        <mat-grid-list cols="4" rowHeight="15rem">
+            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+                [style.background]="tile.color">
+                <img src="{{tile.text}}" alt="" srcset="">
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,49 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Type Column -->
+    <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef> Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>
+            Title
+            <div class="example-button-container">
+                <input placeholder="Ex. Moby Dick" (keyup)="onSearch(searchValue)" [(ngModel)]="searchValue">
+                <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon"
+                    (click)="onSort()">
+                    <mat-icon>filter_list</mat-icon>
+                </button>
+            </div>
+        </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.attributes.content}}
+        </td>
+    </ng-container>
+
+    <!-- Images Column -->
+    <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef> Cover </th>
+        <td mat-cell *matCellDef="let element">
+            <img src="{{element.attributes.display_properties.image}}" alt="" srcset="">
+        </td>
+    </ng-container>
+
+    <!-- Author Column -->
+    <ng-container matColumnDef="relationships">
+        <th mat-header-cell *matHeaderCellDef> Author </th>
+        <td mat-cell *matCellDef="let element">
+            <a href={{element.relationships.authors.links.related}}>Author Profile</a>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
